@@ -8,12 +8,32 @@
     
 }
 
+:root {
+
+    --discord-primary:#3161E0;
+    --discord-accent:#8EA0E0;
+    --discord-black-btn:#23282C;
+    --discord-black:#23272A;
+    --discord-light:#FEFFFF;
+    --discord-white:#ffffff;
+    --discord-light-grey:#F6F6F6;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
 /* #endregion Common */
 
 /* #region Debug */
+
 .debug #site_header {
 
-   background: #ddddf5;
+   background:#ddddf5;
 
 }
 
@@ -53,7 +73,7 @@
 }
 
 
-[class^="col-"] {
+.debug [class^="col-"] {
 
     height: 350px;
     background: #03f594;
@@ -130,10 +150,79 @@
 }
 
 
-.align_items {
+.align_items_center {
 
     align-items: center;
 
+}
+
+.btn {
+
+    display:inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    padding:0.5rem 0.75rem;
+    border-radius: 1.25rem;
+
+}
+
+.btn_xl {
+    font-size: 1.15rem;
+}
+
+.btn_light {
+
+    color: var(--discord-black-btn);
+    background-color: var(--discord-white);
+}
+
+
+.btn_dark {
+
+  color: var(--discord-white);
+  background-color: var(--discord-black-btn);
+
+}
+
+.btn_accent{
+    color: var(--discord-white);
+    background-color: var(--discord-accent);
+}
+
+.icon_down {
+
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-right:0.5rem;
+}
+
+
+.icon_white{
+    fill:var(--discord-white)
+}
+
+.text_center {
+
+    text-align: center;
+}
+
+.wave{
+
+    width:100%;
+    
+
+}
+
+.discord_grey {
+    color:var(--discord-light-grey)
+}
+
+.mb-1{
+    margin-bottom: -1rem;
+}
+
+.list_style_none {
+    list-style: none;
 }
 
 
@@ -192,7 +281,15 @@
 #site_header{
 
     padding: 0.5rem 0;
+    background: var(--discord-primary);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    
 }
+
+
 
 #site_header nav .logo,
 #site_header nav .sign_in {
@@ -204,12 +301,13 @@
 
     flex-grow:2;
     text-align:center;
+    
 }
-
-#site_header nav .menu li {
+.menu li {
 
     display: inline-block;
     padding-left:0.5rem;
+   
     
 }
 
@@ -218,6 +316,8 @@
     padding-top:0.5rem;
     padding-bottom:0.5rem;
     padding-left:0.5rem;
+    justify-content:center ;
+
 
 }
 
@@ -231,31 +331,92 @@
 .sign_in {
 
     text-align: end;
-    padding-top:0.5rem;
-    padding-bottom:0.5rem;
-    padding-right:0.5rem;
+    
 
 }
+
+.d_white{
+    color:var(--discord-white)
+}
+
+
 
 /* #endregion Header */
 
 /* #region Main */
 
-.jumbotron{
+.jumbotron {
 
-    padding:1.5rem 10rem;
+    background-color: var(--discord-primary);
+    background-image: url(img/jumbo.png);
+    background-size: cover;
+    background-position: center;
+    text-align:center;
+ 
+}
+
+.jumbotron .container {
+
+    padding:8rem 12rem;
 
 }
 
-.server, .channel, .community {
+.jumbotron h2 {
 
-    padding:1.5rem 0;
+    font-size:2.5rem;
+    color: var(--discord-white);
+    margin-bottom: 2.5rem;
+
+}
+
+
+.jumbotron p {
+
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.server, .channel, .community, .media {
+
+    padding:3.5rem 0rem;
 
 } 
 
+.server, .channel, .community, .media h2 {
+
+    font-size:2,5rem;
+    margin-bottom: 1.5rem;
+
+
+}
+
+.server{
+
+    background-color: var(--discord-light);
+}
+
+.col-4{
+    padding:0rem 4rem;
+}
+
+
+
+
+
+.channel {
+    background-color: var(--discord-light-grey);
+}
+
 .media {
 
-    padding: 3rem 0;
+    background-color: var(--discord-light-grey);
+    
+}
+
+.media h3 {
+    margin-bottom: 1.5rem;
 }
 
 /* #endregion Main */
@@ -296,6 +457,53 @@
     width:100%;
     height:1px;
     background: #fffefe;
+}
+
+footer{
+    background-color: var(--discord-black);
+    padding:3.5rem;
+    color: var(--discord-white);
+}
+
+footer h3, h5 {
+    color: var(--discord-accent);
+}
+
+footer .col-4{
+
+    padding:0rem 5rem;
+}
+
+footer h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    
+}
+
+footer h5 {
+
+    font-size: 1rem;
+}
+
+footer .language {
+
+    margin-bottom: 1.5rem;
+    
+}
+
+footer .social_link {
+
+    gap:1rem;
+
+}
+
+footer ul a {
+    color: var(--discord-white);
+    text-decoration: none;
+}
+
+footer .col-2{
+    line-height: 1.5rem;
 }
 
 
